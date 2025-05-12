@@ -1,53 +1,58 @@
-🧑‍💼 Node.js User Management System
+# 🧑‍💼 Node.js User Management System
 
-A CRUD-based user management web app built with Node.js, Express, Express-Handlebars (HBS), and MySQL.
+A CRUD-based user management web app built with **Node.js**, **Express**, **Express-Handlebars (HBS)**, and **MySQL**.
 
-📦 Features
-View, add, edit, delete, and search users
+## 📦 Features
 
-Handlebars template engine with Bootstrap styling
+- View, add, edit, delete, and search users
+- Handlebars template engine with Bootstrap styling
+- MySQL database integration
+- Modular MVC architecture
 
-MySQL database integration
+---
 
-Modular MVC architecture
+## ⚙️ Setup Instructions
 
+### 1. Clone the Repository
 
-⚙️ Setup Instructions
-1. Clone the Repository
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-2. Install Dependencies
-bash
-Copy
-Edit
-npm install
-3. Configure Environment Variables
-Create a .env file in the root directory and add your database credentials:
+```
 
-ini
-Copy
-Edit
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory and add your database credentials:
+
+```
 DB_HOST=localhost
 DB_NAME=usermanagement_tut
 DB_USER=root
 DB_PASS=your_mysql_password
+```
 
-💽 Database Setup
-Use MySQL Workbench (or any MySQL client) to set up your database:
+---
 
-Create the Database
-sql
-Copy
-Edit
+## 💽 Database Setup
+
+Use **MySQL Workbench** (or any MySQL client) to set up your database:
+
+### Create the Database
+
+```sql
 CREATE DATABASE usermanagement_tut;
 USE usermanagement_tut;
-Create the user Table
-sql
-Copy
-Edit
+```
+
+### Create the `user` Table
+
+```sql
 CREATE TABLE user (
   id INT NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(45) NOT NULL,
@@ -58,10 +63,11 @@ CREATE TABLE user (
   status VARCHAR(10) NOT NULL DEFAULT 'active',
   PRIMARY KEY (id)
 ) ENGINE=InnoDB;
-Insert Sample Users
-sql
-Copy
-Edit
+```
+
+### Insert Sample Users
+
+```sql
 INSERT INTO user (id, first_name, last_name, email, phone, comments, status) VALUES
 (NULL, 'Amanda', 'Nunes', 'anunes@ufc.com', '012345678910', '', 'active'),
 (NULL, 'Alexander', 'Volkanovski', 'avolkanovski@ufc.com', '012345678910', '', 'active'),
@@ -81,17 +87,23 @@ INSERT INTO user (id, first_name, last_name, email, phone, comments, status) VAL
 (NULL, 'Ronda', 'Rousey', 'rrousey@ufc.com', '012345678910', '', 'active'),
 (NULL, 'Holly', 'Holm', 'hholm@ufc.com', '012345678910', '', 'active'),
 (NULL, 'Joanna', 'Jedrzejczyk', 'jjedrzejczyk@ufc.com', '012345678910', '', 'active');
-🚀 Run the App
-bash
-Copy
-Edit
-npm start
-Visit http://localhost:3000 in your browser.
+```
 
-📂 Folder Structure
-pgsql
-Copy
-Edit
+---
+
+## 🚀 Run the App
+
+```bash
+npm start
+```
+
+Visit `http://localhost:3000` in your browser.
+
+---
+
+## 📂 Folder Structure
+
+```
 .
 ├── app.js
 ├── .env
@@ -104,11 +116,12 @@ Edit
 ├── routes/
 ├── controllers/
 └── package.json
-✅ Requirements
-Node.js
+```
 
-MySQL Server (e.g., MySQL Workbench)
+---
 
-Modern browser
+## ✅ Requirements
 
-
+- Node.js
+- MySQL Server (e.g., MySQL Workbench)
+- Modern browser
